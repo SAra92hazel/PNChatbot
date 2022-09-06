@@ -1,0 +1,39 @@
+{%include "uheader.html" %}
+
+<h3>Reviews
+</h3>
+	   <div class="bs-docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+
+                  <th>Review</th>
+                  <th>Rating </th>
+                  <th>Date</th>
+                  <th>User</th>                  <th>Sentiment</th>
+                </tr>
+              </thead>
+
+{%  for data in rawdata %}
+              <tbody>
+                <tr>
+
+                  <td>{{data[3]}}</td>
+                  <td>{{data[2]}}</td>
+                  <td>{{data[5]}}</td>
+                  <td>{{data[4]}}</td>
+                  <td>{{data[7]}}</td>
+
+                </tr>
+{% endfor %}
+			</table>
+
+
+	</div>
+<center>
+<img src="{{ url_for('static',filename='sentiment.png')}}" alt=""></center>
+
+	<br><br><br><br><br>
+
+
+{%include "footer.html" %}

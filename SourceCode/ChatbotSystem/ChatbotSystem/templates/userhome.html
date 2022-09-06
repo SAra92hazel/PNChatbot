@@ -1,0 +1,12 @@
+{%include "uheader.html" %}
+
+<h1>
+Welcome User.
+</h1>
+<br><br><br><br><br>
+{%  for data in rawdata %}
+                {{data[1]}}
+
+{% endfor %}
+
+{%include "footer.html" %}

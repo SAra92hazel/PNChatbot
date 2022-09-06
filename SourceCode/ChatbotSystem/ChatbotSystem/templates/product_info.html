@@ -1,0 +1,89 @@
+
+
+{%include "aheader.html" %}
+
+</div>
+
+
+{%  for data in rawdata %}
+ <div class="spec ">
+				<h3>View Product</h3>
+				<br>
+					<div class="ser-t">
+						<b></b>
+						<span><i></i></span>
+						<b class="line"></b>
+					</div>
+			</div>
+
+		<div class="single">
+			<div class="container">
+						<div class="single-top-main">
+	   		<div class="col-md-5 single-top">
+	   		<div class="single-w3agile">
+
+
+<div id="picture-frame">
+
+      <img src="{{url_for('static',filename='images/'+data[7] )}}"  width="267" height="251" alt=""
+			class="img-responsive"/>
+
+
+
+		</div>
+
+
+			</div>
+			</div>
+			<div class="col-md-7 single-top-left ">
+								<div class="single-right">
+				<h3>{{data[3]}}</h3>
+
+
+
+				 <div class="pr-single">
+				  <p class="reduced ">{{data[4]}}/-</p>
+
+
+				</div>
+
+				<p class="in-pa">{{data[6]}} </p>
+
+
+
+  <span style="display: block; width: 65px; height: 13px; background: url({{ url_for('static',filename='images/star-rating-sprite.png')}}) 0 0;">
+    <span style="display: block; width:{{rating}}%; height: 13px; background: url({{ url_for('static',filename='images/star-rating-sprite.png')}}) 0 -13px;"></span><a href="" target="target" >({{reviwes}})&nbsp;Reviews</a>
+
+
+
+
+
+{% endfor %}
+
+
+			<div class="clearfix"> </div>
+			</div>
+
+
+			</div>
+		   <div class="clearfix"> </div>
+	   </div>
+
+
+	</div>
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+	</div>
+	</div>
+<br><br><br><br><br><br><br><br><br>
+{%include "footer.html" %}

@@ -1,0 +1,24 @@
+{%include "uheader.html" %}
+
+<h3>Purchased Successfully..</h3>
+
+<h3>
+<table cellspacing="10" align="center">
+<tr>
+	<td>Item: {{sub}}</td>
+<tr>
+	<td>Cost per unit: {{cost}}</td>
+<tr>
+	<td>No. of Items: {{qty }}</td>
+<tr>
+	<td>Total Cost: {{tcost }}</td>
+</tr>
+</table>
+	<center><A onclick="javascript:print();" style="cursor:hand">Print</A>
+</center>
+</h3>
+
+
+<br><br>
+
+{%include "footer.html" %}

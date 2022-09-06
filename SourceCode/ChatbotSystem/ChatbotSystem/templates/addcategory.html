@@ -1,0 +1,34 @@
+
+{%include "aheader.html" %}
+
+
+ {% if msg %}
+
+<script>alert('New category added successfully..!')</script>
+
+    {% endif %}
+<strong>Add Category of the products..</h1><br><br></strong>
+
+
+
+
+<table align="center" cellpadding="10" >
+<tr><td><font size="" color="#004f9d"><b><b>No&nbsp;&nbsp;&nbsp;<td><font size="" color="#004f9d"><b>Subject
+{%  for data in rawdata %}
+
+
+<tr><td>{{data[0]}}
+<td>{{data[1]}}
+
+{% endfor %}
+<form method="post" action="category_insert">
+
+<tr><td><br><input required  type="text" name="level1" placeholder="Enter Main Menu Subject" size="40"><input required  type="submit" value="   ADD  ">
+</form>
+</table>
+
+
+<hr>
+<br><br>
+
+{%include "footer.html" %}

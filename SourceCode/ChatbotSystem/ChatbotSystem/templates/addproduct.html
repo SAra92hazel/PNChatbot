@@ -1,0 +1,42 @@
+
+{%include "aheader.html" %}
+ {% if msg %}
+
+<script>alert('New product added successfully..!')</script>
+
+    {% endif %}
+
+ <h5 class="head_agileinfo text-center text-capitalize pb-5">
+                <span>A</span>dd Products</h5>
+
+
+
+
+<form method="post" action="productinsert" enctype="multipart/form-data">
+
+<table align="center" cellpadding="5">
+    <tr><td><h3><font size="" color="#004f9d"><b>Select Category</b></font></h3>
+<tr><td><select name="catgry">
+{%  for data in rawdata %}
+<option value="{{data[0]}},{{data[1]}}">{{data[1]}}
+
+{% endfor %}
+</select><br>
+
+<tr><td><input type="text" name="sub" size="20" required placeholder="Enter Item Name">
+<tr><td><input type="number" step="any" min="0"  required name="cost" size="30" placeholder="Enter Cost">
+<tr><td><input type="number" step="any" min="0"  required name="mcost" size="30" placeholder="Enter Minimum Cost">
+<tr><td><input type="file" step="any"  required name="picture" >
+<tr><td><h5><textarea name="des" rows="8" cols="91"  required placeholder="Enter Description"></textarea>
+
+
+<tr><td>
+<input type="submit" value="   ADD  ">
+</form>
+</table>
+
+
+<br><br>
+
+
+{%include "footer.html" %}

@@ -1,0 +1,84 @@
+{%include "uheader.html" %}
+
+ <form method="post" action="/buy">
+
+
+{%  for data in rawdata %}
+
+    <div class="innerf-pages section py-5">
+        <div class="container">
+            <div class="row my-sm-5">
+                <div class="col-lg-4 single-right-left">
+                    <div class="grid images_3_of_2">
+                        <div class="flexslider1">
+                            <ul class="slides">
+								 <div class="thumb-image">
+									   <li>
+										    <div class="thumb-image">
+                                                	<img src="{{url_for('static',filename='images/'+data[7] )}}"  width="267" height="209" alt="">
+											 		</div>
+														</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-lg-0 mt-5 single-right-left simpleCart_shelfItem">
+                    <h3>{{data[3]}}</h3>
+                    </h3>
+
+
+  <table>
+<tr>
+	<td><span style="display: block; width: 65px; height: 13px; background: url({{url_for('static',filename='images/star-rating-sprite.png')}}) 0 0;">
+    <span style="display: block; width:{{rating}}%; height: 13px; background: url({{url_for('static',filename='images/star-rating-sprite.png')}}) 0 -13px;"></span><a  href="http://localhost:1234/reviews/{{data[2]}}">({{reviwes}})&nbsp;Reviews</a>
+</span>
+</td>
+</tr>
+</table>
+
+                    <div class="caption">
+                        <div class="clearfix"> </div>
+										<input type="hidden" name="sub" value="{{data[3]}}">
+										<input type="hidden" name="id" value="{{data[2]}}">
+										<input type="hidden" name="cost" value="{{data[4]}}">
+
+
+
+<BR><BR>
+                        <h5>Cost:
+                           {{data[4]}}/- Rs.</h6>
+
+                  </div>
+                    <div class="desc_single">
+                        <h5>Description</h5>
+                        <p>{{data[6]}} </p>
+                    </div>
+                    <div class="d-sm-flex justify-content-between">
+                        <div class="occasional">
+                            <h5 class="sp_title mb-3">				<a href="#" onclick="window.open('http://localhost:1234/writereview/{{data[2]}}', 'newwindow', 'width=550, height=450'); return false;">Feedback</a>
+
+							</h5>
+                        </div>
+                    </div>
+
+									<h4>No. of items:&nbsp;&nbsp;&nbsp;<input type="number" name="tot" required min=1 placeholder="" value="1"></h4>
+
+
+										  <button class="btn btn-danger my-cart-btn my-cart-b" >Buy</button>
+
+
+							</form>
+
+
+
+
+
+
+
+
+
+
+{% endfor %}
+
+<br><br>

@@ -1,0 +1,29 @@
+
+{%include "uheader.html" %}
+
+
+	<div class="innerf-pages section">
+		<div class="fh-container mx-auto">
+			<div class="row my-lg-5 mb-5">
+				<!-- grid left -->
+				<div class="side-bar col-lg-3">
+					<!--preference -->
+					<div class="left-side">
+						<h3 class="shopf-sear-headits-sear-head">
+							Categories</h3>
+						<ul>
+
+{%  for data in rawdata %}
+							<li>
+<a  href="http://localhost:1234/viewlist/{{data[0]}}">{{ data[1]}}</a>
+							</li>
+{% endfor %}
+</div></div>
+
+
+
+
+
+<br><br><br><br><br>
+
+{%include "footer.html" %}

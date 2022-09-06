@@ -1,0 +1,23 @@
+
+
+{%include "aheader.html" %}
+
+            <h5 class="head_agileinfo text-center text-capitalize pb-5">
+                <span>V</span>iew ML Accuracy</h5>
+
+
+
+			<div class="in-check" >
+
+<table align="center" cellpadding="5" border="2">
+<tr><td><font size="" color="#004f9d"><b>NaiveBaye's<td><font size="" color="#004f9d"><b>SupportVectorMachine
+<td><font size="" color="#004f9d"><b>NeuralNetwork</font>
+    <td><font size="" color="#004f9d"><b>RandomForest
+{%  for data in rawdata %}
+	<tr><td>{{data[0]}}<td>{{data[1]}}<td>{{data[2]}}<td>{{data[3]}}
+{% endfor %}
+</table>
+</div><center>
+<img src="{{ url_for('static',filename='accuracy.png')}}" alt=""></center>
+<br><br>
+{%include "footer.html" %}

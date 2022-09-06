@@ -1,0 +1,42 @@
+
+{%include "uheader.html" %}
+
+
+		 <div class="spec ">
+				<h3> Your Order Deatils</h3>
+					<div class="ser-t">
+						<b></b>
+						<span><i></i></span>
+						<b class="line"></b>
+					</div>
+			</div>
+
+
+      <table class="table ">
+		  <tr>
+
+			<th class="t-head ">Product</th>
+			<th class="t-head">Cost</th>
+		<th class="t-head">Total Purchase</th>
+			<th class="t-head">Total Cost</th>
+		  </tr>
+		  <tr class="cross">
+
+{%  for data in rawdata %}
+<tr>
+
+			<td class="ring-in t-data">
+				{{data[2]}}
+			<td class="t-data">
+				{{data[3]}}/- Rs.
+			<td class="ring-in t-data">
+				{{data[4]}}
+			<td class="ring-in t-data">
+				{{data[5]}}/- Rs.
+{% endfor %}
+	</table>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+
+
+{%include "footer.html" %}

@@ -1,0 +1,26 @@
+
+
+{%include "aheader.html" %}
+
+            <h5 class="head_agileinfo text-center text-capitalize pb-5">
+                <span>V</span>iew Products</h5>
+
+
+
+			<div class="in-check" >
+
+<table align="center" cellpadding="5">
+<tr><td><font size="" color="#004f9d"><b>Sno<td><font size="" color="#004f9d"><b>Category
+<td><font size="" color="#004f9d"><b>Item</font>
+    <td><font size="" color="#004f9d"><b>Cost
+<td><font size="" color="#004f9d"><b>Minimum Cost
+&nbsp;&nbsp;&nbsp;&nbsp;</font></font><td><font size="" color="#004f9d"><b>Details</font>
+
+{%  for data in rawdata %}
+	<tr><td>{{data[2]}}<td>{{data[0]}}<td>{{data[3]}}<td>{{data[4]}}/-<td>{{data[0]}}/-&nbsp;&nbsp;&nbsp;<td><a href="http://localhost:1234/product_info/{{data[2]}}" >View</a>
+{% endfor %}
+</table>
+</div>
+
+<br><br>
+{%include "footer.html" %}

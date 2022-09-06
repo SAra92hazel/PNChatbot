@@ -1,0 +1,77 @@
+
+{%include "uheader.html" %}
+
+
+	<div class="innerf-pages section">
+		<div class="fh-container mx-auto">
+			<div class="row my-lg-5 mb-5">
+				<!-- grid left -->
+				<div class="side-bar col-lg-3">
+					<!--preference -->
+					<div class="left-side">
+						<h3 class="shopf-sear-headits-sear-head">
+							Categories</h3>
+						<ul>
+
+{%  for data in rawdata %}
+							<li>
+<a  href="http://localhost:1234/viewlist/{{data[0]}}">{{ data[1]}}</a>
+							</li>
+{% endfor %}
+</div></div>
+
+
+
+
+				<div class="col-lg-9 mt-lg-0 mt-5">
+					<!-- card group  -->
+					<div class="card-group">
+
+
+{%  for product in products %}
+
+						<div class="col-lg-3 col-sm-6 p-0">
+							<div class="card product-men p-3">
+								<div class="men-thumb-item">
+									<img src="{{ url_for('static', filename='images/'+product[7]  ) }}"  width="267" height="209" alt=""
+									class="card-img-top"/>
+
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+
+										</div>
+									</div>
+								</div>
+								<!-- card body -->
+								<div class="card-body  py-3 px-2">
+									<h5 class="card-title text-capitalize">{{product[3]}}</h5>
+									<div class="card justify-content-between">
+										<p class="text-dark font-weight-bold">	&#8377; {{product[4]}}/-</p>
+
+									</div>
+								</div>
+								<!-- card footer -->
+								<div class="card-footer d-flex justify-content-end">
+									<form action="/viewprod" method="post">
+										<input type="hidden" name="pid" value="{{product[2]}}">
+										<button type="submit" class="hub-cart phub-cart btn">
+											<i class="fa fa-eye" aria-hidden="true"></i>
+										</button>
+
+									</form>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+{% endfor %}
+</div></div></div>
+
+
+<br><br><br><br><br>
+
+{%include "footer.html" %}
